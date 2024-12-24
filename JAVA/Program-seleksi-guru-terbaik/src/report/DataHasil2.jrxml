@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="406ea183-b726-4aaa-ac4c-b691383d5e63">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     dataguru.`nip` AS dataguru_nip,
+     dataguru.`nama` AS dataguru_nama,
+     dataguru.`jk` AS dataguru_jk,
+     dataguru.`alamat` AS dataguru_alamat,
+     dataguru.`telp` AS dataguru_telp,
+     datanilai.`idnilai` AS datanilai_idnilai,
+     datanilai.`nip` AS datanilai_nip,
+     datanilai.`absen` AS datanilai_absen,
+     datanilai.`pm` AS datanilai_pm,
+     datanilai.`interaksi` AS datanilai_interaksi,
+     datanilai.`sikap` AS datanilai_sikap,
+     datanilai.`ba` AS datanilai_ba,
+     datanilai.`bpm` AS datanilai_bpm,
+     datanilai.`bi` AS datanilai_bi,
+     datanilai.`bs` AS datanilai_bs,
+     databobot.`idbobot` AS databobot_idbobot,
+     databobot.`idnilai` AS databobot_idnilai,
+     databobot.`ba1` AS databobot_ba1,
+     databobot.`bpm1` AS databobot_bpm1,
+     databobot.`bi1` AS databobot_bi1,
+     databobot.`bs1` AS databobot_bs1,
+     databobot.`ba2` AS databobot_ba2,
+     databobot.`bpm2` AS databobot_bpm2,
+     databobot.`bi2` AS databobot_bi2,
+     databobot.`bs2` AS databobot_bs2,
+     datanormalisasi.`idnormal` AS datanormalisasi_idnormal,
+     datanormalisasi.`idbobot` AS datanormalisasi_idbobot,
+     datanormalisasi.`ba3` AS datanormalisasi_ba3,
+     datanormalisasi.`bpm3` AS datanormalisasi_bpm3,
+     datanormalisasi.`bi3` AS datanormalisasi_bi3,
+     datanormalisasi.`bs3` AS datanormalisasi_bs3,
+     datanormalisasi.`total` AS datanormalisasi_total,
+     datanormalisasi.`rank` AS datanormalisasi_rank,
+     datahasil.`idhasil` AS datahasil_idhasil,
+     datahasil.`idnormal` AS datahasil_idnormal,
+     datahasil.`nilai` AS datahasil_nilai,
+     datahasil.`peringkat` AS datahasil_peringkat
+FROM
+     `dataguru` dataguru INNER JOIN `datanilai` datanilai ON dataguru.`nip` = datanilai.`nip`
+     INNER JOIN `databobot` databobot ON datanilai.`idnilai` = databobot.`idnilai`
+     INNER JOIN `datanormalisasi` datanormalisasi ON databobot.`idbobot` = datanormalisasi.`idbobot`
+     INNER JOIN `datahasil` datahasil ON datanormalisasi.`idnormal` = datahasil.`idnormal`
+ORDER BY nilai DESC]]>
+	</queryString>
+	<field name="dataguru_nip" class="java.lang.String"/>
+	<field name="dataguru_nama" class="java.lang.String"/>
+	<field name="dataguru_jk" class="java.lang.String"/>
+	<field name="dataguru_alamat" class="java.lang.String"/>
+	<field name="dataguru_telp" class="java.lang.String"/>
+	<field name="datanilai_idnilai" class="java.lang.String"/>
+	<field name="datanilai_nip" class="java.lang.String"/>
+	<field name="datanilai_absen" class="java.lang.String"/>
+	<field name="datanilai_pm" class="java.lang.String"/>
+	<field name="datanilai_interaksi" class="java.lang.String"/>
+	<field name="datanilai_sikap" class="java.lang.String"/>
+	<field name="datanilai_ba" class="java.lang.Double"/>
+	<field name="datanilai_bpm" class="java.lang.Double"/>
+	<field name="datanilai_bi" class="java.lang.Double"/>
+	<field name="datanilai_bs" class="java.lang.Double"/>
+	<field name="databobot_idbobot" class="java.lang.String"/>
+	<field name="databobot_idnilai" class="java.lang.String"/>
+	<field name="databobot_ba1" class="java.lang.Double"/>
+	<field name="databobot_bpm1" class="java.lang.Double"/>
+	<field name="databobot_bi1" class="java.lang.Double"/>
+	<field name="databobot_bs1" class="java.lang.Double"/>
+	<field name="databobot_ba2" class="java.lang.Float"/>
+	<field name="databobot_bpm2" class="java.lang.Float"/>
+	<field name="databobot_bi2" class="java.lang.Float"/>
+	<field name="databobot_bs2" class="java.lang.Float"/>
+	<field name="datanormalisasi_idnormal" class="java.lang.String"/>
+	<field name="datanormalisasi_idbobot" class="java.lang.String"/>
+	<field name="datanormalisasi_ba3" class="java.lang.Double"/>
+	<field name="datanormalisasi_bpm3" class="java.lang.Double"/>
+	<field name="datanormalisasi_bi3" class="java.lang.Double"/>
+	<field name="datanormalisasi_bs3" class="java.lang.Double"/>
+	<field name="datanormalisasi_total" class="java.lang.Float"/>
+	<field name="datanormalisasi_rank" class="java.lang.Integer"/>
+	<field name="datahasil_idhasil" class="java.lang.String"/>
+	<field name="datahasil_idnormal" class="java.lang.String"/>
+	<field name="datahasil_nilai" class="java.lang.Float"/>
+	<field name="datahasil_peringkat" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1e02f7aa-d755-48a6-8fbb-bbac9b82d794" x="266" y="13" width="279" height="54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MTs Al-Husna]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="ce0987ed-0d59-4e7c-b540-c84ec1e9eca2" x="36" y="-11" width="143" height="141"/>
+				<imageExpression><![CDATA["C:\\Users\\LENOVO\\OneDrive\\Documents\\NetBeansProjects\\tugasAkhir\\src\\image\\alhusna.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="343" y="90" width="107" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[(021) 8724678]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="303" y="67" width="196" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Jl.Akses UI No.45, Kota Depok]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="293" y="10" width="232" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Hasil]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="cfce3ddc-b216-490f-86f8-c25c1a7b6813" x="0" y="0" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cf373ec1-c863-4bb2-9a52-2bbae5eb186b" x="0" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID HASIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7682cf26-dd4e-4d2c-863e-5c6544fed23d" x="160" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID NORMALISASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb4ba30d-bc8b-4a08-ae5b-4b6f1b9b269d" x="320" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c685697-eb03-48cc-98cd-964b6846de9e" x="480" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NILAI AKHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d10ce473-c285-4678-b9c1-9174a903ed6b" x="640" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PERINGKAT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="67ab96cd-03a1-4945-826a-430f6aed1ecf" x="0" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{datahasil_idhasil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="75c23da8-7b07-43a1-9de5-b525929509a4" x="160" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{datahasil_idnormal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="792ed0fa-8107-4ef8-8a89-24e5710a4af0" x="320" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dataguru_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="071ebebe-5a10-4abb-b1f2-9a6a14447746" x="480" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{datahasil_nilai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e07f7f0c-d9d2-4e5f-9e56-61d4dfefd080" x="640" y="0" width="160" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{datahasil_peringkat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="123" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="03625c09-d401-4deb-88ad-50d046530c40" x="606" y="10" width="184" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMM yyyy", new Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="559" y="10" width="47" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="600" y="97" width="102" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Drs. Edi Suhaedi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="602" y="31" width="112" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Kepala Madrasah]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

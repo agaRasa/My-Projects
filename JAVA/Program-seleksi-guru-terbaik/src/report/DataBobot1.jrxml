@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bed51af9-5a4a-4c0f-8d3a-9f659fcb096d">
+	<property name="ireport.zoom" value="1.331000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     databobot.`idbobot` AS databobot_idbobot,
+     databobot.`idnilai` AS databobot_idnilai,
+     databobot.`ba1` AS databobot_ba1,
+     databobot.`bpm1` AS databobot_bpm1,
+     databobot.`bi1` AS databobot_bi1,
+     databobot.`bs1` AS databobot_bs1,
+     databobot.`ba2` AS databobot_ba2,
+     databobot.`bpm2` AS databobot_bpm2,
+     databobot.`bi2` AS databobot_bi2,
+     databobot.`bs2` AS databobot_bs2
+FROM
+     `databobot` databobot]]>
+	</queryString>
+	<field name="databobot_idbobot" class="java.lang.String"/>
+	<field name="databobot_idnilai" class="java.lang.String"/>
+	<field name="databobot_ba1" class="java.lang.Double"/>
+	<field name="databobot_bpm1" class="java.lang.Double"/>
+	<field name="databobot_bi1" class="java.lang.Double"/>
+	<field name="databobot_bs1" class="java.lang.Double"/>
+	<field name="databobot_ba2" class="java.lang.Float"/>
+	<field name="databobot_bpm2" class="java.lang.Float"/>
+	<field name="databobot_bi2" class="java.lang.Float"/>
+	<field name="databobot_bs2" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1e02f7aa-d755-48a6-8fbb-bbac9b82d794" x="266" y="13" width="279" height="54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MTs Al-Husna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="343" y="90" width="107" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[(021) 8724678]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="ce0987ed-0d59-4e7c-b540-c84ec1e9eca2" x="36" y="-11" width="143" height="141"/>
+				<imageExpression><![CDATA["C:\\Users\\LENOVO\\OneDrive\\Documents\\NetBeansProjects\\tugasAkhir\\src\\image\\alhusna.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="303" y="67" width="196" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Jl.Akses UI No.45, Kota Depok]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="303" y="11" width="229" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Bobot]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="cfce3ddc-b216-490f-86f8-c25c1a7b6813" x="0" y="0" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="74cd2821-61bf-4070-aab3-53e5258c9437" x="0" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID BOBOT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a193b21e-a96b-4351-8014-0e6ce0971357" x="133" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID NILAI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91c85d6c-e9d8-4a5a-8b42-6982648fee52" x="266" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ABSENSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76fce27f-4497-4225-8f22-f48c56dca2b5" x="399" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PENGUASAAN MATERI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7636033b-d349-47f7-a45b-4e1295b25562" x="532" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[INTERAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8addac13-93b4-4608-85ee-6333068c9007" x="665" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[SIKAP]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="bc8f0e18-5414-4ff0-a1aa-755d3a6b9efe" x="0" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_idbobot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b82c0641-7daa-4304-b210-35b73689ae8b" x="133" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_idnilai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0ff4b40-f4b4-440b-90c3-269d93239f95" x="266" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_ba1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="40d852e5-848d-4a77-80e4-e5542e192026" x="399" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_bpm1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eece66e0-d6bc-488a-b0db-a529d6401f29" x="532" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_bi1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fe73ce4d-8b9e-4501-8da6-d56ec1d6642a" x="665" y="0" width="133" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{databobot_bs1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="567" y="10" width="47" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="03625c09-d401-4deb-88ad-50d046530c40" x="614" y="10" width="184" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMM yyyy", new Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="610" y="31" width="112" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Kepala Madrasah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2b29ac5-b527-4757-9042-1659b6722618" x="608" y="97" width="102" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<text><![CDATA[Drs. Edi Suhaedi]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
